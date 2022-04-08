@@ -1,0 +1,27 @@
+load_data:
+  dtype: float32
+  dataset_name: ogbl-collab
+  dataset_params:
+    select_lcc: True
+    remove_selfloops: False
+    make_undirected: True
+    make_unweighted: True
+
+model:
+  model_type: FPHConstrainedDirectParameterization
+  model_params:
+    loss: DASGUPTA
+    store_on_cpu_process_on_gpu: False
+    internal_nodes: 512
+    same_leaf_correction: False
+    optimizer_params:
+      optimizer_type: PGD
+      opt_params:
+        - { 'lr': 1e-2, 'params': ['A_u.weight'] }
+        - { 'lr': 1e-9, 'params': ['B_u'] }
+  store_best_hierarchy: True
+  tree_init: avg
+training:
+  max_epochs: 2000
+  use_gpu: True
+  val_every: 10

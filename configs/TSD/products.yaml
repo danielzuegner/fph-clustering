@@ -1,0 +1,31 @@
+load_data:
+  dtype: float32
+  dataset_name: ogbn-products
+  dataset_params:
+    select_lcc: True
+    remove_selfloops: False
+    make_undirected: True
+    make_unweighted: True
+
+model:
+  model_type: FPHConstrainedDirectParameterization
+  model_params:
+    loss: TSD
+    store_on_cpu_process_on_gpu: True
+    internal_nodes: 512
+    same_leaf_correction: False
+    optimizer_params:
+      optimizer_type: PGD
+      opt_params.lr: 150
+  store_best_hierarchy: True
+  tree_init: avg
+
+training:
+  use_gpu: False
+  training.max_epochs: 2000
+  load_data.dtype: float32
+  training.val_every: 200
+  load_data.dataset_params.node_dropout.type: NHopNodeDropout
+  load_data.dataset_params.node_dropout.params:
+      n_samples: 10000
+      cap: 200000
