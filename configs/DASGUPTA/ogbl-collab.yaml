@@ -17,8 +17,8 @@ model:
     optimizer_params:
       optimizer_type: PGD
       opt_params:
-        - { 'lr': 1e-2, 'params': ['A_u.weight'] }
-        - { 'lr': 1e-9, 'params': ['B_u'] }
+        - { 'lr': 0.01, 'params': ['A_u.weight'] }
+        - { 'lr': 0.000000001, 'params': ['B_u'] }
   store_best_hierarchy: True
   tree_init: avg
 training:

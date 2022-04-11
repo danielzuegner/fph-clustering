@@ -16,7 +16,7 @@ model:
     same_leaf_correction: False
     optimizer_params:
       optimizer_type: PGD
-      opt_params.lr: 5e-2
+      opt_params.lr: 0.05
   store_best_hierarchy: True
   tree_init: avg
   
