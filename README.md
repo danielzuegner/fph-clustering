@@ -15,7 +15,7 @@ Daniel Zügner
 Technical University of Munich    
 
 ## Additional resources
-[[Paper](https://openreview.net/forum?id=g2LCQwG7Of) | [Poster (soon)](...) | [Slides](https://www.in.tum.de/fileadmin/w00bws/daml/fph/presentation.pdf)]
+[[Paper](https://openreview.net/forum?id=g2LCQwG7Of) | [Poster](https://www.in.tum.de/fileadmin/w00bws/daml/fph/iclr_2022_poster.pdf) | [Slides](https://www.in.tum.de/fileadmin/w00bws/daml/fph/presentation.pdf)]
 
 ## Run the code
  
