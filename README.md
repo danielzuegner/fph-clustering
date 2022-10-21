@@ -1,8 +1,6 @@
 # End-to-End Learning of  Probabilistic Hierarchies on Graphs
 
-<p align="center">
-<img src="https://www.in.tum.de/fileadmin/w00bws/daml/fph/model_overview.png" width="400">
-</p>
+![](figure.png)
 
 Implementation of the paper:   
 **[End-to-End Learning of Probabilistic Hierarchies on Graphs](https://openreview.net/forum?id=g2LCQwG7Of)**
